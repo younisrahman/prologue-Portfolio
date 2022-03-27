@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .cursor {
+            cursor: pointer;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="img1.jpg" onclick="openModal();" >
+    </div>
+    <div class="column">
+      <img src="img2.jpg" onclick="openModal();" >
+    </div>
+    <div class="column">
+      <img src="img3.jpg" onclick="openModal();" >
+    </div>
+    <div class="column">
+      <img src="img4.jpg" onclick="openModal();" >
+    </div>
+  </div>
+  
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+   
+    <script>
+        // Open the Modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        
+        </script>
+
+</body>
+
+</html>

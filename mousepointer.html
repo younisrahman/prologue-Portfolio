@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Cursor style */
+        .cursor {
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: transparent;
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1001;
+        }
+
+        .cursor__follower {
+            transition: transform .3s;
+            background-color: red;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+
+        .cursor__follower2 {
+            transition: transform .6s;
+            background-color: orange;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+
+        .cursor__follower3 {
+            transition: transform .9s;
+            background-color: yellow;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+        .cursor__follower4 {
+            transition: transform 1.2s;
+            background-color: green;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+
+        .cursor__follower5 {
+            transition: transform 1.5s;
+            background-color: skyblue;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+
+        .cursor__follower6 {
+            transition: transform 1.8s;
+            background-color: blue;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+
+        .cursor__follower7 {
+            transition: transform 2.1s;
+            background-color: violet;
+            width: 12px;
+            height: 12px;
+            z-index: 1000;
+        }
+        /* Unrelated styles */
+      
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        var root = document.querySelector('html');
+
+        // Real cursor element
+        var cursor = document.createElement('div')
+        cursor.classList.add('cursor')
+        root.appendChild(cursor)
+
+        // Following extra cursor element
+        var follower = document.createElement('div')
+        follower.classList.add('cursor', 'cursor__follower')
+        root.appendChild(follower)
+
+         // Following extra cursor element
+         var follower2 = document.createElement('div')
+         follower2.classList.add('cursor', 'cursor__follower2')
+         root.appendChild(follower2)
+
+         // Following extra cursor element
+         var follower3 = document.createElement('div')
+         follower3.classList.add('cursor', 'cursor__follower3')
+         root.appendChild(follower3)
+
+         // Following extra cursor element
+        var follower4 = document.createElement('div')
+        follower4.classList.add('cursor', 'cursor__follower4')
+        root.appendChild(follower4)
+
+         // Following extra cursor element
+         var follower5 = document.createElement('div')
+         follower5.classList.add('cursor', 'cursor__follower5')
+         root.appendChild(follower5)
+
+         // Following extra cursor element
+         var follower6 = document.createElement('div')
+         follower6.classList.add('cursor', 'cursor__follower6')
+         root.appendChild(follower6)
+
+         // Following extra cursor element
+        var follower7 = document.createElement('div')
+        follower7.classList.add('cursor', 'cursor__follower7')
+        root.appendChild(follower7)
+
+
+        root.addEventListener('mousemove', (e) => {
+            setPosition(follower7, e)
+            setPosition(follower6, e)
+            setPosition(follower5, e)
+            setPosition(follower4, e)
+            setPosition(follower3, e)
+            setPosition(follower2, e)
+            setPosition(follower, e)
+            setPosition(cursor, e)
+        })
+        
+        follower2.style.display = "none";
+        follower3.style.display = "none";
+        follower4.style.display = "none";
+        follower5.style.display = "none";
+        follower6.style.display = "none";
+        follower7.style.display = "none";
+        setTimeout(function(){follower2.style.display = "block";}, 2000);
+        setTimeout(function(){follower3.style.display = "block";}, 4000);
+        setTimeout(function(){follower4.style.display = "block";}, 6000);
+        setTimeout(function(){follower5.style.display = "block";}, 8000);
+        setTimeout(function(){follower6.style.display = "block";}, 10000);
+        setTimeout(function(){follower7.style.display = "block";}, 12000);
+        
+        
+        function setPosition(element, e) {
+            element.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+            
+        }
+    </script>
+
+</body>
+
+</html>
